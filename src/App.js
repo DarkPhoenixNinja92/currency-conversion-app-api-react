@@ -2,6 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const api = 'https://v6.exchangerate-api.com/v6/2fefdf9a750573c0c4d6e10f/latest/USD';
+
+  fetch(api)
+  .then(response => response.json())
+  .then(res => console.log(res))
   return (
     <div className="App">
       <header className="App-header">
